@@ -1,0 +1,220 @@
+.flow-container { 
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+
+.step-container {
+    position: relative;
+    text-align: center;
+}
+
+.step {
+    background: linear-gradient(135deg, #007bff, #00d4ff);
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+    color: white;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.step.active {
+    box-shadow: 0px 0px 20px rgba(0, 55, 255, 0.9);
+    opacity: 1;
+}
+
+.step.inactive {
+    opacity: 0.5;
+}
+
+.step-icon {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.step h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.step ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.step-number {
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    color: #007bff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-weight: bold;
+    border: 2px solid #007bff;
+}
+
+/* Styling för details box med pil */
+.step-details {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+/* Pil nedanför steget */
+.arrow-down {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #ffffff;
+}
+
+/* Responsiv design för mobilanpassning */
+@media (max-width: 768px) {
+    .flow-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .step {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Pil som visas under det aktiva steget */
+.arrow-down {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #fcf7f7;
+    display: none;
+}
+
+/* När steget är aktivt visas pilen */
+.step-container.active .arrow-down {
+    display: block;
+}
+
+/* Anpassa textlådan så att den ligger under pilen */
+.step-details {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: none;
+}
+
+/* Visa textrutan endast när steget är aktivt */
+.step-container.active .step-details {
+    display: block;
+}
+
+/* --- Styling för underrubriker (sub-steps) --- */
+.sub-steps {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    gap: 10px;
+    position: relative;
+}
+
+/* Varje underrubrik + info-ruta i samma rad */
+.sub-step-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    position: relative;
+}
+
+/* Moderna, runda knappar för Test 1, Test 2, Test 3 */
+.sub-step-container button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #00d4ff, #007bff);
+    color: #ffffff;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    min-width: 120px; /* Större knappar */
+}
+
+.sub-step-container button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Uppdaterad styling för underrubrik-rutan (substep-info) --- */
+.substep-info {
+    position: absolute;
+    left: 160px; /* Flytta rutan mer åt höger */
+    top: 0;
+    border: 1px solid #85b6fb;
+    padding: 15px; /* Mer luft */
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 600px; /* Bredare ruta */
+    min-width: 500px; /* Förhindra att rutan blir för smal */
+    line-height: 1.6; /* Bättre läsbarhet */
+    font-size: 1rem; /* Standardiserad textstorlek */
+    white-space: normal; /* Tillåt normal textbrytning */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: visible; /* Se till att texten inte klipps */
+    z-index: 10;
+}
+
+/* Punktlistor i underrubriksrutan */
+.substep-info ul {
+    padding-left: 20px;
+}
+
+.substep-info li {
+    margin-bottom: 8px; /* Gör det lättare att läsa */
+}
