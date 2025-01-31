@@ -1,3 +1,6 @@
+body {
+    font-family: 'Open Sans', sans-serif; /* Använd gärna det typsnitt som ligger närmast Västerås stads profil */
+  }
 .flow-container { 
     display: flex;
     justify-content: space-around;
@@ -16,7 +19,7 @@
 }
 
 .step {
-    background: linear-gradient(135deg, #007bff, #00d4ff);
+    background: linear-gradient(135deg, #5129ff, #3f9e62);
     border: none;
     border-radius: 10px;
     padding: 20px;
