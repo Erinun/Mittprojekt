@@ -50,6 +50,7 @@ body {
 .step-icon {
     font-size: 50px;
     margin-bottom: 10px;
+     /* Här kan du även lägga till en bakgrundsbild/ikon med t.ex. background-image */
 }
 
 .step h3 {
@@ -71,20 +72,20 @@ body {
     left: 50%;
     transform: translateX(-50%);
     background-color: #ffffff;
-    color: #007bff;
+    color: #5129ff;
     border-radius: 50%;
     width: 40px;
     height: 40px;
     line-height: 40px;
     font-weight: bold;
-    border: 2px solid #007bff;
+    border: 2px solid #5129ff;
 }
 
 /* Styling för details box med pil */
 .step-details {
     margin-top: 20px;
     padding: 15px;
-    background-color: #ffffff;
+    background-color: #fff3ec;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
@@ -92,6 +93,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     position: relative;
+    display: none;
 }
 
 /* Pil nedanför steget */
@@ -104,7 +106,7 @@ body {
     height: 0;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
-    border-bottom: 15px solid #ffffff;
+    border-bottom: 15px solid #fff3ec;
 }
 
 /* Responsiv design för mobilanpassning */
@@ -181,7 +183,7 @@ body {
     padding: 10px 20px;
     border: none;
     border-radius: 20px;
-    background: linear-gradient(135deg, #00d4ff, #007bff);
+    background: linear-gradient(135deg, #00912e, #fd90fd);
     color: #ffffff;
     font-weight: 500;
     cursor: pointer;
