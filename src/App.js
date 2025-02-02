@@ -1,11 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Layout from './Layout';
 import LandingPage from './Pages/Landingpage.js';
 import ProcessPage from './Pages/ProcessPage.js';
 import MaterialPage from './Pages/MaterialPage.js';
 import './App.css';
 import React from 'react';
-import OrgCharts from './components/OrgCharts.js';
 
 function App() {
   return (
