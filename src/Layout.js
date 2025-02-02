@@ -1,3 +1,4 @@
+import React from 'react';
 // src/Layout.js
 import { Outlet, Link } from 'react-router-dom';
 import './Layout.css'; // Om du vill ha separat CSS
