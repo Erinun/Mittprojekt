@@ -1,0 +1,12 @@
+.sub-step-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #b19b9b, #5057df);
+    color: #ffffff;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    min-width: 120px;
+  }
+  

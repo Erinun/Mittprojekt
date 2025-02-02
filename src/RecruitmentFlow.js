@@ -2,15 +2,19 @@ import React, { useState, useRef } from 'react';
 import Connector from './Connector';
 import './RecruitmentFlow.css';
 
-function RecruitmentFlow() {
-  // Befintliga state-variabler
+function RecruitmentFlow({ process }) {
+  // All hooks kallas först
   const [activeStep, setActiveStep] = useState(null);
   const [selectedSubStep, setSelectedSubStep] = useState(null);
-
-  // Definiera en ref-array för stegen
   const stepRefs = useRef([]);
 
-  // Dina steg
+  // Villkorlig rendering baserat på process
+  if (process !== 'rekryteringspaket') {
+    return null;
+    // Alternativt: return <div>Processen "{process}" är inte implementerad ännu.</div>;
+  }
+
+  // Dina steg för rekryteringspaket
   const steps = [
     {
       id: 1,

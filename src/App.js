@@ -1,15 +1,26 @@
-import RecruitmentFlow from './RecruitmentFlow';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Layout from './Layout';
+import LandingPage from './Pages/Landingpage.js';
+import ProcessPage from './Pages/ProcessPage.js';
+import MaterialPage from './Pages/MaterialPage.js';
 import './App.css';
+import React from 'react';
+import OrgCharts from './components/OrgCharts.js';
 
 function App() {
   return (
-    <div className="App">
-      <header className="site-header">
-        <img src="vasteras stad_logotyp.png" alt="Logotyp" className="logo" />
-      </header>
-      <h1>Rekryteringsprocess paket 2025</h1>
-      <RecruitmentFlow />
-    </div>
+    <Router>
+      <div className="App">
+        <header className="site-header">
+          <img src="vasteras stad_logotyp.png" alt="Logotyp" className="logo" />
+        </header>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/processer" element={<ProcessPage />} />
+          <Route path="/material" element={<MaterialPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
