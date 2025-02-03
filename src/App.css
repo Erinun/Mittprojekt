@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+/* Stil för header */
+.site-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background: #fff;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Stil för logotyp */
+.logo {
+  height: 60px; /* Justera storlek vid behov */
+  width: auto;
+  margin-right: 20px;
+}
