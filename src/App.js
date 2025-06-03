@@ -1,15 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import LandingPage from './Pages/Landingpage.js';
-import ProcessPage from './Pages/ProcessPage.js';
-import MaterialPage from './Pages/MaterialPage.js';
-import KnowledgeSharing from './Pages/KnowledgeSharing.js';
-import Dashboard from './Pages/Dashboard.js';
-import Quiz from './Pages/Quiz.js';
-import AIPage from './Pages/AIPage.js';
+import LandingPage from '../legacy/Pages/Landingpage.js';
+import ProcessPage from '../legacy/Pages/ProcessPage.js';
+import MaterialPage from '../legacy/Pages/MaterialPage.js';
+import KnowledgeSharing from '../legacy/Pages/KnowledgeSharing.js';
+import Dashboard from '../legacy/Pages/Dashboard.js';
+import Quiz from '../legacy/Pages/Quiz.js';
+import AIPage from '../legacy/Pages/AIPage.js';
 import './App.css';
-
-<img src="/logga.png" alt="Logotyp" className="logo" />
 
 
 function App() {
